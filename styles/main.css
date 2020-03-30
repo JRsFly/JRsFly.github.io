@@ -862,6 +862,10 @@ pre code {
   }
 }
 
+      .posttitlewithoutimg {
+        color: #ced4da;
+      }
+    
       .sitename {
         color: #15aabf;
       }
@@ -872,5 +876,13 @@ pre code {
       
         .menubutton {
           color: #7950f2;
+        }
+      
+        .posttitle {
+          color: #c92a2a;
+        }
+      
+        #sitegotimeDate,#sitegotimes,#footinfo,#footinfo a{
+          color: #f06595;
         }
       
