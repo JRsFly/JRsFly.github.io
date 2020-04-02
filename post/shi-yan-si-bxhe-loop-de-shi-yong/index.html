@@ -1,22 +1,102 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://JRsFly.github.io</id>
-    <title>JRsFly</title>
-    <updated>2020-04-02T18:02:10.832Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://JRsFly.github.io"/>
-    <link rel="self" href="https://JRsFly.github.io/atom.xml"/>
-    <subtitle>本人菜鸡一枚,啥也不会</subtitle>
-    <logo>https://JRsFly.github.io/images/avatar.png</logo>
-    <icon>https://JRsFly.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, JRsFly</rights>
-    <entry>
-        <title type="html"><![CDATA[实验四[bx]和loop的使用]]></title>
-        <id>https://JRsFly.github.io/post/shi-yan-si-bxhe-loop-de-shi-yong/</id>
-        <link href="https://JRsFly.github.io/post/shi-yan-si-bxhe-loop-de-shi-yong/">
-        </link>
-        <updated>2020-04-02T18:00:16.000Z</updated>
-        <content type="html"><![CDATA[<h4 id="实验四bx和loop的使用">实验四[bx]和loop的使用</h4>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>实验四[bx]和loop的使用 | JRsFly</title>
+<meta name="description" content="本人菜鸡一枚,啥也不会">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://JRsFly.github.io/favicon.ico?v=1585850528393">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://JRsFly.github.io/styles/main.css">
+
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://JRsFly.github.io">JRsFly</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                归档
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/about" class="menu">
+                关于
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="https://JRsFly.github.io/post/shi-yan-si-bxhe-loop-de-shi-yong" class="menu">
+                学习
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>实验四[bx]和loop的使用</h1>
+            <p class="article-meta">
+              2020-04-03
+              
+            </p>
+            
+            <div class="post-content">
+              <h4 id="实验四bx和loop的使用">实验四[bx]和loop的使用</h4>
 <p><strong>1）编程，向内存0:2000<sub>0:23F依次传送数据0</sub>63(3FH)</strong></p>
 <p><strong>2）和第一要求一样，但是只要求用9条指令</strong></p>
 <p>分析：使用ds段地址变量来实现传送数据，同时bx即作为偏移地址也作为数据来使用</p>
@@ -46,17 +126,101 @@ end
 <p>如上图可以把0:200<sub>0:23F存入数据0</sub>63(3FH)，由于单步执行次数过多，剩下的就用-g命令了</p>
 <figure data-type="image" tabindex="3"><img src="data:image/png;base64,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" alt="2" loading="lazy"></figure>
 <p><strong>3）下面的程序功能是将</strong></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[第一次写博客]]></title>
-        <id>https://JRsFly.github.io/post/di-yi-ci-xie-bo-ke/</id>
-        <link href="https://JRsFly.github.io/post/di-yi-ci-xie-bo-ke/">
-        </link>
-        <updated>2020-03-30T13:42:39.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="ds">ds</h1>
-<pre><code>
-</code></pre>
-]]></content>
-    </entry>
-</feed>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://JRsFly.github.io/post/di-yi-ci-xie-bo-ke/">
+                <h3 class="post-title">
+                  第一次写博客
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+      </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://JRsFly.github.io/images/avatar.png?v=1585850528393" class="no-responsive avatar">
+    <div class="text-muted">本人菜鸡一枚,啥也不会</div>
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://JRsFly.github.io/post/shi-yan-si-bxhe-loop-de-shi-yong/">实验四[bx]和loop的使用</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://JRsFly.github.io/post/di-yi-ci-xie-bo-ke/">第一次写博客</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://JRsFly.github.io/post/about/">关于</a>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+    </div>
+  </div>
+  <div class="paper">
+     | <a class="rss" href="https://JRsFly.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+
+  </body>
+</html>
