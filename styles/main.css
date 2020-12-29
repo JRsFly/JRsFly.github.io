@@ -992,6 +992,14 @@ td {
         font-family: -apple-system,BlinkMacSystemFont,'Helvetica Neue','PingFang SC','Hiragino Sans GB','Droid Sans Fallback','Microsoft YaHei',sans-serif;
       }
     
+      .main {
+        background: #adb5bd;
+      }
+    
+      body {
+        background: #3bc9db;
+      }
+    
       .unsplash-image-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
