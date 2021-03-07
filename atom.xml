@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jrsfly.github.io</id>
     <title>JRsFly</title>
-    <updated>2021-03-07T12:55:00.509Z</updated>
+    <updated>2021-03-07T12:55:22.448Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jrsfly.github.io"/>
     <link rel="self" href="https://jrsfly.github.io/atom.xml"/>
@@ -12,50 +12,961 @@
     <icon>https://jrsfly.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, JRsFly</rights>
     <entry>
-        <title type="html"><![CDATA[操作系统概念]]></title>
-        <id>https://jrsfly.github.io/post/cao-zuo-xi-tong-gai-nian/</id>
-        <link href="https://jrsfly.github.io/post/cao-zuo-xi-tong-gai-nian/">
+        <title type="html"><![CDATA[汇编练习]]></title>
+        <id>https://jrsfly.github.io/post/da-suan/</id>
+        <link href="https://jrsfly.github.io/post/da-suan/">
         </link>
-        <updated>2021-03-07T05:18:26.000Z</updated>
-        <content type="html"><![CDATA[<p>计算机系统</p>
-<h5 id="操作系统概念">操作系统概念</h5>
-<p>​		操作系统是用户与计算机硬件之间的接口</p>
-<p>​						是配置在计算机硬件上的第一层软件</p>
-<p>​						是对硬件的扩充，形成了虚拟计算机/扩展机，位于硬件于其他软件之间，是所有其他软件的运行基础</p>
-<p><strong>资源复用：</strong> 分为时间复用（多个用户或程序轮流使用某个资源，如CPU使用）和空间复用（多个用户和程序同时使用资源的一部分，不需排队，如内存使用）</p>
-<p>​		让系统对宝贵资源能够共享地来使用</p>
-<p>​		解决资源数量不足的问题</p>
-<p><strong>资源虚化：</strong>  让一个物理设备变成多个相对独立的对应物，也称为虚拟性，为资源复用提供了技术支持</p>
-<p>**资源抽象：**将具体的资源管理变成较为统一、简单的管理方式；创建新的管理对象来屏蔽底层资源的复杂特性和接口细节；对内封装细节、对外提供管理对象于访问接口</p>
-<p>​	举例 ： 面向进程而不是面向CPU，面向文件而不是物理存储介质，面向窗口而不是屏幕</p>
-<p>复用与虚拟化解决资源不足的问题，资源抽象解决资源复杂的问题</p>
-<p><strong>现代操作系统的基础资源抽象</strong></p>
-<p>​	进程抽象 ： 程序在CPU上执行的状态与管理集</p>
-<p>​	虚存抽象 ： 物理内存的状态与管理集、   实现内存独占、逻辑隔离与保护</p>
-<p>​	文件抽象 ： 物理存储介质的状态与管理集 、 如逻辑字节流，而不是CHS</p>
-<p><strong>批处理技术（自动过渡方式）</strong>： 监督程序是最早的操作系统雏形</p>
-<p>​		分为联机和脱机两种</p>
-<p><strong>单处理器系统中多道程序运行特点</strong>：</p>
-<p>同时存放多道相互独立程序、宏观上并行、微观上串行</p>
-<p><strong>多重处理系统</strong> ： 配置了多个物理CPU，能真正同时执行多道程序的系统</p>
-<p><strong>批处理操作系统</strong> ：作业是在一次解题或一个事务处理过程中要求计算机系统所作工作的集合，包括用户程序、所需的数据及命令</p>
-<p>​		单道批处理系统 ： 一道作业的批处理系统 ，自动运行，无人工干预，按顺序进行，内存只有一道作业</p>
-<p>​		多道批处理系统 ： 多道程序设计技术，进入顺序与完成顺序无严格对应，从提交到完成经历两级调度（作业调度、进程调度）</p>
-<p><strong>分时操作系统</strong>（把运行时间分成短片，分配给用户轮流使用） ： 允许多个联机用户同时使用一台计算机系统进行计算操作，</p>
-<p>​				人机交互，控制程序运行 ； 共享主机， 多人使用 ； 方便用户上机，通过终端提交作业</p>
-<p>​				多路性（终端用户可以同时使用计算机）、交互性（人机会话，来控制程序运行）、独立性（感觉不到他人在使用）、及时性（能很短时间内完成响应）</p>
-<p><strong>实时操作系统</strong>：及时完成响应外部事件的要求，在规定时间内完成对该事件的处理， <strong>及时可靠</strong></p>
-<p>操作系统一般兼有批处理、分时、实时三者中至少两者功能被称为 <strong>通用操作系统</strong></p>
-<p>其他操作系统类型 ： 嵌入式操作系统、个人计算机操作系统、 网络操作系统、 分布式操作系统</p>
-<p><strong>操作系统基本特征</strong>（并发性、 共享性、 虚拟性、 异步性【不确定性】）</p>
-<p><strong>并行  &amp;&amp;  并发</strong>： 前者是指至少两个事件在同一时刻发生 ，后者是在同一时间间隔内</p>
-<p><strong>并发性</strong>（<strong>多路复用</strong>） ： 宏观上，多道程序在一段时间内同时运行； 微观上是交替执行</p>
-<p><strong>进程</strong>是系统能独立运行并作为资源分配基本单位的活动实体</p>
-<p><strong>共享性</strong>：系统中的资源可供多个并发程序进程共同使用</p>
-<p>​	<strong>互斥共享</strong>（一段时间只允许一个进程访问）、 <strong>同时访问</strong>（一段时间内允许多个进程访问）</p>
-<p><strong>并发和共享是操作系统最基本的特征</strong></p>
-<p><strong>虚拟性</strong>： 虚拟是指把一个物理上的实体变为若干个逻辑上的对应物，前者是实际存在的，后者是虚构假象的</p>
-<p><strong>异步性</strong>（不确定性）： 多个作业的执行过程时断时续，执行顺序和时间不确定</p>
+        <updated>2021-03-07T11:53:46.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<h6 id="第一题">第一题</h6>
+<pre><code class="language-assembly">stack segment stack
+	dw 200 dup(0)
+stack ends
+data segment
+	bin dw 6f80h,98b0h,-74abh,-0f88ah
+	buf db 13 dup(0),13,10,'$'
+	ten dw 10
+data ends
+assume cs:code,ds:data,ss:stack 
+code segment
+	
+start:	mov ax,data
+	 	mov ds,ax
+	 	lea bx,bin
+L:		
+		mov ax,[bx]		;
+		lea di,buf
+		mov cx,0
+		or ax,ax    ;符号位处理
+		jns L1
+		mov byte ptr[di],'-'
+		inc di
+		neg ax
+L1:		mov dx,0
+		div ten
+		push dx
+		inc cx
+		cmp ax,0
+		jnz L1
+L2:		pop ax
+		add al,30h
+		mov [di],al
+		inc di
+		loop L2	
+		lea dx,buf
+		mov ah,9
+		int 21h
+L3:		dec di
+		mov byte ptr [di],0
+		cmp dx,di
+		jne L3	
+		add bx,2
+		cmp bx,8
+		jne L	
+		mov ah,4ch
+		int 21h	
+code ends
+end start
+</code></pre>
+<h6 id="第二题">第二题</h6>
+<pre><code class="language-assembly">assume cs:code,ds:data
+data segment
+	input1 db &quot;please input:&quot;,'$'
+	num	db	&quot; decimalism!&quot;,13,10,'$'
+	large	db	&quot; capital letter!&quot;,13,10,'$'	
+	sma	db	&quot; small letter!&quot;,13,10,'$'
+data ends
+code segment
+start:	mov ax,data
+		mov ds,ax
+L:		lea dx,input1
+		mov ah,9
+		int 21h
+		mov ah,1
+		int	21h
+		cmp al,'0'
+		jb	exit
+		cmp al,'9'
+		JA L1
+		lea dx,num
+		mov ah,9
+		int 21h
+		jmp	L
+L1:		cmp al,'A'
+		jb exit
+		cmp	al,'Z'
+		JA	L2
+		lea dx,large
+		mov ah,9
+		int 21h
+		jmp L
+L2:		cmp al,'a'
+		jb exit
+		cmp	al,'z'
+		ja	l2
+		lea dx,sma
+		mov ah,9
+		int 21h
+		jmp L
+exit:	mov ah,4ch
+		int 21h
+code ends
+end start
+</code></pre>
+<h6 id="第三题">第三题</h6>
+<pre><code class="language-assembly">inout macro x,y
+	lea dx,x
+	mov ah,y
+	int 21h
+endm
+assume cs:code,ds:data
+data segment
+	
+	p1	db	&quot;please input string1:&quot;,'$'
+	p2	db	&quot;please input string2:&quot;,'$'
+	c0	db	13,10,'$'
+	c1	db	&quot;NO MATCH&quot;,13,10,'$'
+	c2	db	&quot;MATCH&quot;,13,10,'$'
+	str1 db	20,0,20 dup(0)
+	str2 db 20,0,20 dup(0)
+data ends
+code segment
+start:	
+	mov ax,data
+	mov ds,ax
+	mov es,ax
+	inout p1,9
+	inout str1,10
+	inout c0,9
+	inout p2,9
+	inout str2,10
+	inout c0,9
+	
+	mov	cl,str1+1
+	cmp cl,str2+1
+	jne no
+	mov ch,0
+	lea di,str1+2
+	lea si,str2+2
+	repz cmpsb
+	jne no
+	inout c2,9
+	jmp exit
+no:	inout c1,9
+exit:mov ah,4ch
+	int 21h
+code ends
+end start
+</code></pre>
+<h6 id="第四题">第四题</h6>
+<pre><code class="language-assembly">inout macro x,y
+	lea dx,x
+	mov ah,y
+	int 21h
+endm
+assume ds:data,cs:code,ss:stack,es:data
+stack segment
+	dw  200 dup(0)
+stack ends
+
+data segment
+	ary dw 100h,250ah,0ff88h,8660h,40h,9500h,6000h,1200h,8008h,0a200h,2800h,0ff60h,0f50h
+	N	dw ($-ary)/2
+	ave dw ?
+	c0 	db 	13,10,'$'
+	c1	db 	'All number:$' 
+	c2	db	'the AVERGE:$'
+	c3	db	'the number that bigger than the average:$'
+	buf db 13 dup(0)
+	count dw ?
+	ten dw 10
+data ends
+code segment
+start:	mov ax,data
+		mov ds,ax
+		mov es,ax
+		inout c1,9
+		inout c0,9
+		mov ax,0
+		mov dx,0
+		mov cx,N
+		lea bx,ary
+L:		call two_ch_ten 
+		add ax,[bx]
+		adc dx,0
+		push cx
+		mov cx,0
+		add cx,[bx]
+		pop cx
+		jns P
+		add dx,0ffffh			
+P:		add bx,2
+loop L
+	push ax
+	push dx
+	inout c0,9
+	inout c2,9
+	inout c0,9
+	pop dx
+	pop ax
+L1:	or dx,dx
+	pushf
+	jns L2	
+	xor dx,0ffffh
+	xor ax,0ffffh
+	add ax,1
+	adc dx,0	
+L2:	mov cx,N
+	div cx
+	popf
+	jns L3
+	neg ax	
+L3: mov ave,ax
+	lea bx,ave
+	call two_ch_ten
+	push ax
+	push dx
+	inout c0,9
+	inout c3,9
+	inout c0,9
+	pop dx
+	pop ax
+	mov dx,0
+	mov ax,ave
+	lea bx,ary
+L4: cmp [bx],ax
+	jle	PP
+	inc dx
+PP:	add bx,2
+	loop L4
+	lea bx,count
+	mov [bx],dx
+	call two_ch_ten
+	mov ah,4ch
+	int 21h
+;子程序名：two_ch_ten
+;功能描述：将二进制数转换为十进制输出
+;入口参数：ds:[bx]
+;出口参数：输出比ave大的数
+two_ch_ten	proc
+	push ax
+	push bx
+	push cx
+	push di
+	push dx
+	mov ax,[bx]
+	lea di,buf
+	mov cx,0
+	or ax,ax
+    jns t1
+    mov byte ptr [di],'-'
+    inc di
+    neg ax
+t1: mov dx,0
+	div ten
+	push dx
+	inc cx
+	cmp ax,0
+	jne t1
+t2:	pop ax
+	add	al,30h
+	mov [di],al
+	inc di
+	loop t2
+	mov byte ptr [di],','
+	mov byte ptr [di+1],'$'
+	add di,2
+	inout buf,9
+t3:	dec di
+	mov byte ptr[di],0
+	cmp dx,di
+	jne t3
+	pop dx
+	pop di
+	pop cx
+	pop bx
+	pop ax
+	ret
+two_ch_ten	endp
+code ends
+end start
+</code></pre>
+<h6 id="第五题">第五题</h6>
+<pre><code class="language-assembly">inout macro x,y
+	lea dx,x
+	mov ah,y
+	int 21h
+endm
+assume ds:data,cs:code
+data segment
+	A 	dw  1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
+	B	dw  1,3,5,7,9,11,13,15,17,19,21,22,23,24,25,26,27,28,29,30
+	D	dw	100 dup(' ')
+	c1	db	'numbers in A:$'
+	c2	db	'numbers in B:$'
+	c3	db	'numbers in C:$'
+	c0 	db	13,10,'$'
+	buf db 13 dup(0)
+	ten dw 10
+data ends
+code segment
+start:	mov ax,data
+		mov ds,ax
+		mov es,ax
+		lea si,D
+		lea bx,A
+		mov cx,15
+L:		mov ax,[bx]
+		lea di,B
+		push cx
+		mov cx,20
+L1:		mov dx,[di]
+ 		cmp dx,ax
+ 		jne L2
+ 		mov [si],ax
+ 		add si,2
+L2:		add di,2
+		loop L1
+		pop cx
+		add bx,2
+		loop L
+L3:		inout c1,9
+		lea bx,A
+		mov cx,15
+LA:		call two_ch_ten
+		add bx,2
+loop LA
+		inout c0,9
+		inout c2,9
+		lea bx,B
+		mov cx,15
+LB:		call two_ch_ten
+		add bx,2
+loop LB
+		inout c0,9
+		inout c3,9
+		lea bx,D
+LC:		call two_ch_ten
+		add bx,2
+		sub si,2
+		cmp si,offset D
+		jne LC
+		inout c0,9
+		mov ah,4ch
+		int 21h
+;子程序名：two_ch_ten
+;功能描述：将二进制数转换为十进制输出
+;入口参数：ds:[bx]
+;出口参数：输出比ave大的数
+two_ch_ten	proc
+	push ax
+	push bx
+	push cx
+	push di
+	push dx
+	mov ax,[bx]
+	lea di,buf
+	mov cx,0
+	or ax,ax
+    jns t1
+    mov byte ptr [di],'-'
+    inc di
+    neg ax
+t1: mov dx,0
+	div ten
+	push dx
+	inc cx
+	cmp ax,0
+	jne t1
+t2:	pop ax
+	add	al,30h
+	mov [di],al
+	inc di
+	loop t2
+	mov byte ptr [di],','
+	mov byte ptr [di+1],'$'
+	add di,2
+	inout buf,9
+t3:	dec di
+	mov byte ptr[di],0
+	cmp dx,di
+	jne t3
+	pop dx
+	pop di
+	pop cx
+	pop bx
+	pop ax
+	ret
+two_ch_ten	endp
+code ends
+end start
+</code></pre>
+<h6 id="第六题">第六题</h6>
+<pre><code class="language-assembly">.386
+inout macro x,y
+	push ax
+	push dx
+	lea dx,x
+	mov ah,y
+	int 21h
+	pop dx
+	pop ax
+endm
+print macro x
+	push ax
+	push dx
+	mov dl,x
+	mov ah,2
+	int 21h
+	pop dx
+	pop ax
+endm
+assume ds:data,cs:code,es:data
+data segment use16
+	str1 dd	-0A62B89F0H, -739066ABH,11112222H,88889999H
+	c0 	db	13,10,'$'
+	c1 	db 	'the unsignal decimalism number is:$'
+	c2 	db 	'the signal decimalism number is:$'
+	c3 	db 	'the unsignal decimalism number is:$'
+	c4 	db 	'the signal decimalism number is:$'
+	buf db 13 dup(0)
+	base dd 10
+	flag db 0
+	H	db	'H'
+	D	db	'D'
+data ends
+code segment use16	
+start:	mov ax,data
+		mov ds,ax
+		mov es,ax
+		lea bx,str1
+		mov cx,4
+PP:		mov base,10
+		mov flag,0
+		inout c1,9
+		call two_ch_base
+		print D
+		inout c0,9
+		inout c2,9
+		mov flag,1
+		call two_ch_base
+		print D
+		inout c0,9
+		
+		inout c3,9
+		mov base,16
+		mov flag,0
+		call two_ch_base
+		print H
+		inout c0,9
+		inout c4,9
+		mov flag,1
+		call two_ch_base
+		print H
+		inout c0,9
+		inout c0,9
+		add bx,4
+		loop PP1
+		jmp	exit
+PP1:	jmp PP
+exit:	mov ah,4ch
+		int 21h
+;子程序名：two_ch_ten
+;功能描述：将二进制数转换为十进制输出
+;入口参数：ds:[bx]
+;出口参数：输出比ave大的数
+two_ch_base	proc near
+	push ax
+	push cx
+	push di
+	push dx
+	push si
+	mov eax,[bx]
+	mov ch,flag
+	cmp ch,0
+	mov si,0
+	mov cx,0
+	je t1
+	or eax,eax
+    jns t1
+    mov buf[di],'-'
+    inc di
+    neg eax
+t1: mov edx,0
+	div base
+	push dx
+	inc cx
+	cmp eax,0
+	jne t1
+t2:	pop ax
+	add	al,30h
+	cmp al,39h
+	jna tt 
+	add al,'A'-'0'-10
+tt:	mov buf[di],al
+	inc di
+	loop t2
+
+	mov buf[di],'$'
+	inc di
+	inout buf,9
+t3:	mov buf[di],0
+	dec di
+	cmp di,0
+	jne t3
+	pop si
+	pop dx
+	pop di
+	pop cx
+	pop ax
+	ret
+two_ch_base	endp
+code ends
+end start
+</code></pre>
+<h6 id="第七题">第七题</h6>
+<pre><code class="language-assembly">inout macro x,y
+	lea dx,x
+	mov ah,y
+	int 21h
+endm
+assume ds:data,cs:code
+data segment 
+	c0	db 	13,10,'$'
+	c1	db	'please input number(0-999):$'
+	er	db 	'It is not a number!',13,10,'$'
+	c2	db	'The statistics reslut is:',13,10,'$'
+	m0	db	'0&lt;=~&lt;=99:   $'
+	m1	db	'100&lt;=~&lt;=199:$'
+	buf dw 	102 dup (0)
+	str1 db  10,0,10 dup(0)
+	ss1	dw	12 dup(0) 		
+	sum dw 10 dup(0)
+	ten dw 10
+	base dw 10
+	div1 dw 100
+	count dw 0
+data ends
+code segment
+start:	mov ax,data
+		mov ds,ax
+		mov es,ax
+
+		call scanf
+		call cal
+		call output
+		mov ah,4ch
+		int 21h
+;子程序名:scanf
+;功能描述：用于将字符存入buf缓存区中
+scanf proc
+		lea bx,buf
+s1:		inout c1,9
+		inout str1,10
+		inout c0,9 
+		mov al,str1+1
+		mov ah,0
+		lea si,str1+2
+		add si,ax
+		mov ax,0
+		lea di,str1+2
+s2:		mov cl,[di]
+		cmp cl,30h
+		js sexit
+		cmp cl,39h
+		ja sexit
+		sub cl,30h
+		mul base
+		mov ch,0
+		add ax,cx
+		inc di
+		cmp si,di
+		jnz s2
+		mov [bx],ax
+		inc count
+		add bx,2
+		jmp s1
+sexit:	inout er,9
+		ret
+scanf endp
+;子程序名:cal
+;功能描述:计算各个区间所含数个数
+cal proc
+	mov cx,count
+	lea bx,buf
+cc:	mov ax,[bx]
+	mov dx,0
+	div div1
+	mov si,ax
+	add si,si
+	inc sum[si]
+	add bx,2
+	loop cc
+	ret
+cal endp
+;子程序名:output
+;功能描述:输出各个区间所含数个数
+output proc 
+	inout c2,9
+	inout m0,9
+	mov cx,9
+	lea bx,sum
+	call bcd
+	add bx,2
+	inout c0,9
+o1:	inout m1,9
+	call bcd
+	add bx,2
+	inout c0,9
+	inc m1
+	inc m1+8
+	loop o1
+	ret
+output endp
+;子程序名：bcd
+;功能描述：将二进制数转换为十进制输出
+;入口参数：ds:[bx]
+;出口参数：输出比ave大的数
+BCD	proc
+	push ax
+	push bx
+	push cx
+	push di
+	push dx
+	mov ax,[bx]
+	lea di,ss1
+	mov cx,0
+	or ax,ax
+    jns t1
+    mov byte ptr [di],'-'
+    inc di
+    neg ax
+t1: mov dx,0
+	div base
+	push dx
+	inc cx
+	cmp ax,0
+	jne t1
+t2:	pop ax
+	add	al,30h
+	cmp al,'9'
+	JS pp
+	add al,7
+pp:	
+	mov [di],al
+	inc di
+	loop t2
+	mov byte ptr [di],'$'
+	add di,2
+	inout ss1,9
+t3:	dec di
+	mov byte ptr[di],0
+	cmp dx,di
+	jne t3
+	pop dx
+	pop di
+	pop cx
+	pop bx
+	pop ax
+	ret
+BCD	endp
+code ends
+end start
+</code></pre>
+<h6 id="第八题">第八题</h6>
+<pre><code class="language-assembly">inout macro x,y
+	lea dx,x
+	mov ah,y
+	int 21h
+endm
+assume ds:data,cs:code
+data segment 
+	c0	db 	13,10,'$'
+	c1	db	'please input numbert(0-999):$'
+	er	db 	'It is not a number!',13,10,'$'
+	c2	db	'The statistics reslut is:',13,10,'$'
+	m0	db	'0&lt;=~&lt;=99:$'
+	m1	db	'100&lt;=~&lt;=199:$'
+	buf dw 	102 dup (0)
+	str1 db  10 dup(0)
+	sum dw 10 dup(0)
+	ten dw 10
+	base dw 10
+	div1 dw 100
+	count dw 0
+data ends
+code segment
+start:	mov ax,data
+		mov ds,ax
+		mov es,ax
+
+		call scanf
+		call cal
+		call output
+		mov ah,4ch
+		int 21h
+;子程序名:scanf
+;功能描述：用于将字符存入buf缓存区中
+scanf proc
+		lea bx,buf
+s1:		inout c1,9
+		inout str1,10
+		inout c0,9 
+		mov al,str1+1
+		mov ah,0
+		lea si,str1+2
+		add si,ax
+		lea di,str1+2
+s2:		mov cl,[di]
+		cmp cl,30h
+		js sexit
+		cmp cl,39h
+		jns sexit
+		sub cl,30h
+		mul base
+		mov ch,0
+		mov ax,cx
+		inc di
+		cmp si,di
+		jnz s2
+		mov [bx],ax
+		inc count
+		jmp s1
+sexit:	inout er,9
+		ret
+scanf endp
+;子程序名:cal
+;功能描述:计算各个区间所含数个数
+cal proc
+	mov cx,count
+	lea bx,buf
+cc:	mov ax,[bx]
+	mov dx,0
+	div div1
+	mov si,ax
+	inc sum[si*2]
+	loop cc
+	ret
+cal endp
+;子程序名:output
+;功能描述:输出各个区间所含数个数
+output proc 
+	inout c2,9
+	inout m0,9
+	mov cx,9
+	lea bx,cnt
+	inout c0,9
+	call bcd
+	add bx,2
+	inout c0,9
+o1:	inout m1,9
+	call bcd
+	inout c0,9
+	add bx,2
+	inc m1
+	inc m1+8
+	loop o1
+	ret
+output endp
+;子程序名：bcd
+;功能描述：将二进制数转换为十进制输出
+;入口参数：ds:[bx]
+;出口参数：输出比ave大的数
+BCD	proc
+	push ax
+	push bx
+	push cx
+	push di
+	push dx
+	mov ax,[bx]
+	lea di,pp
+	mov cx,0
+	or ax,ax
+    jns t1
+    mov byte ptr [di],'-'
+    inc di
+    neg ax
+t1: mov dx,0
+	div base
+	push dx
+	inc cx
+	cmp ax,0
+	jne t1
+t2:	pop ax
+	add	al,30h
+	cmp al,'9'
+	JS pp
+	add al,7
+pp:	
+	mov [di],al
+	inc di
+	loop t2
+	mov byte ptr [di],','
+	mov byte ptr [di+1],'$'
+	add di,2
+	inout buf,9
+t3:	dec di
+	mov byte ptr[di],0
+	cmp dx,di
+	jne t3
+	pop dx
+	pop di
+	pop cx
+	pop bx
+	pop ax
+	ret
+BCD	endp
+code ends
+end start
+</code></pre>
+<h6 id="第九题">第九题</h6>
+<pre><code class="language-assembly">inout macro x,y
+	lea dx,x
+	mov ah,y
+	int 21h
+endm
+assume cs:code,ds:data,ss:stack
+stack segment
+	db 256 dup(0)
+stack ends
+data segment
+	c0	db	13,10,'$'
+	c1	db 	'Please set password(number and letters):$'
+	c2	db 	'Please input login password:$'
+	c3 	db	'Login succeed!The true password is:$'
+	c4	db	'Login failed!The true password is:$'
+	;min	db	'0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+	ser db	'2349875610QWERTYUIOPASDFGHJKLZXCVBNM'
+	count = 28
+	key	db	'9801267543KXVMCNOPHQRSZYIJADLEGWBUFT'
+	mcode db count dup(0),13,10,'$'
+	jcode db count dup(0),13,10,'$'
+	buf   db count dup(0),13,10,'$'
+	num1 dw 0
+	num dw	0
+data ends
+code segment
+start:	mov ax,stack
+		mov ss,ax
+		mov ax,data
+		mov ds,ax
+		mov es,ax
+		mov bx,1
+		call setting
+		call login
+		call check
+		call save
+		inout jcode,9
+		mov ah,4ch
+		int 21h
+;过程名称:setting
+;功能:设置密码
+setting proc 
+	 	inout c1,9
+	 	mov si,0
+input:	mov ah,7
+		int 21h
+		push ax
+		mov dl,'*'
+		mov ah,2
+		int 21h
+		pop ax
+		cmp al,30h
+		jb exit
+		cmp al,39h
+		jbe digit
+		cmp al,'A'
+		jb exit
+		cmp al,'Z'
+		jbe char
+		jmp exit
+char:	sub al,7
+digit:	sub al,'0'
+		lea bx,ser
+		xlatb
+		mov mcode[si],al
+		inc si
+		loop input
+exit:	mov num,si
+		inout c0,9
+		inout mcode,9
+		inout c0,9
+		ret
+setting endp
+;过程名称:login
+;功能:输入登入密码
+login proc
+	 	inout c2,9
+	 	mov si,0
+input:	mov ah,7
+		int 21h
+		push ax
+		mov dl,'*'
+		mov ah,2
+		int 21h
+		pop ax
+		cmp al,30h
+		jb exit1
+		cmp al,39h
+		jbe digit1
+		cmp al,'A'
+		jb exit1
+		cmp al,'Z'
+		jbe char1
+		jmp exit1
+char1:	sub al,7
+digit1:	sub al,'0'
+		lea bx,ser
+		xlatb
+		mov buf[si],al
+		inc si
+		loop input
+exit1:	mov num1,si
+		inout c0,9
+		inout buf,9
+		inout c0,9
+		ret
+login endp
+;过程名称:check
+;功能:判断输入密码和设定密码是否相同
+check proc
+	lea si,buf
+	lea di,mcode
+	mov ax,num
+	cmp ax,num1
+	jnz no
+	mov cx,num
+	cld
+	repz cmpsw
+	jnz no
+	inout c3,9
+    inout c0,9
+   	jmp exit1
+no:	inout c4,9
+	inout c0,9
+exit1:ret
+check endp
+;过程名称:save
+;功能:有密文获得明文
+save proc
+	cld
+	mov cx,num
+	lea si,mcode
+	lea di,jcode
+	lea bx,key
+J:	lodsb
+	cmp al,39h
+	jbe dig
+	sub al,7
+dig:sub al,'0'
+	xlatb 
+	stosb
+	loop J
+	ret
+save endp
+code ends
+end start
+</code></pre>
 ]]></content>
     </entry>
 </feed>
